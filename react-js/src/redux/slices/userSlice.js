@@ -1,32 +1,33 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { getUsers as getUserApi } from "../api/userApi.js";
+import { getUsersApi } from "../api/userApi.js";
 
-const getUsers = createAsyncThunk("users/fetchByIdStatus", async () => {
-  const response = await getUserApi();
-  return response.data;
+export const getUsers = createAsyncThunk("users/getUsers", async () => {
+  const response = await getUsersApi();
+  return response;
 });
 
 const initialState = {
-  entities: [],
+  data: [],
   loading: false,
+  error: "",
 };
 
 export const userSlice = createSlice({
-  name: "posts",
+  name: "user",
   initialState,
   reducers: {},
-  builder: {
-    [getUsers.pending]: (state) => {
-      state.loading = true;
-    },
-    [getUsers.fulfilled]: (state, { payload }) => {
-      state.loading = false;
-      state.entities = payload;
-    },
-    [getUsers.rejected]: (state) => {
-      state.loading = false;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getUsers.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(getUsers.fulfilled, (state, action) => {
+        state.data = action.payload;
+      })
+      .addCase(getUsers.rejected, (state, action) => {
+        state.error = action.error.message;
+      });
   },
 });
 

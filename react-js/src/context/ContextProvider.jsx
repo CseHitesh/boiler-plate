@@ -3,7 +3,7 @@ import { ThemeContext } from "./context";
 import { useMemo } from "react";
 
 const ContextProvider = ({ children }) => {
-  const [theme, setTheme] = useState("hello");
+  const [theme, setTheme] = useState("dark");
 
   const contextValue = useMemo(
     () => ({

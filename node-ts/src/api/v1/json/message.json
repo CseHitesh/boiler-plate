@@ -1,0 +1,26 @@
+{
+   
+    
+    "INVALID_LOGIN": "Invalid phone number or password",
+    "INVALID_EMAIL": "email already exists",
+    "INVALID_PASSWORD": "Invalid Password",
+    "PASSWORD_LENGTH": "Password must be at least 6 characters long",
+    "INVALID_PARAMETERS": "Sorry, the request could not be processed as because of invalid parameters.",
+    "ERROR": "Error",
+    "LOGIN_SUCCESS": "Login Successfully",
+    "REGISTER_SUCCESS": "Register Successfully",
+    "FILL_DETAILS": "Please enter the entire details",
+    "NOT_ALLOWED": "Sorry, the action you tried to perform is not allowed.\nIf you feel this is not correct, kindly call support.",
+    "NOT_AUTHORIZED": "Sorry, you are not authorized to perform this action.",
+    "NOT_FOUND": "Sorry, no entry could be found for the specified criteria.\nIf you feel this is not correct, kindly call support.",
+    "PASSWORD_NOT_UPDATED": "Some error occurred while changing the password",
+    "PASSWORD_UPDATED": "New password updated",
+    "USER_PROFILE_UPDATED": "User profile updated successfully",
+    "USER_EXIST": "User already exist in the system",
+    "USER_NOT_EXIST": "User does not exist in the system",
+
+    "GENERAL_EROOR": "Sorry! Something went wrong with the request. Please try again later."
+    
+  
+  }
+  
